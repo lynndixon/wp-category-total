@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Category Total
-Plugin URI: http://rv9a.pacificrimsound.com/
-Description: This plugin adds up a custom field for each post in a category and displays it in the category list.  Updated for version 2.5 table structure.
-Author: Dave Parsons (dualrudder.com), updated by Joshua Wyatt
-Version: 2.0
+Plugin URI: https://github.com/lynndixon/wp-category-total
+Description: This plugin adds up a custom field for each post in a category and displays it in the category list. Updated for version 2.5 table structure. Updated to support PHP 8.0 strict function checking
+Author: Dave Parsons (dualrudder.com), updated by Joshua Wyatt, Updated by Lynn Dixon
+Version: 2.5
 Author URI: http://rv9a.pacificrimsound.com/
 */ 
 
@@ -15,14 +15,14 @@ class category_total {
 		// parameter for every category in the list.
 
 		global $wpdb;
+
 		// Set this value to the key of the custom field to total
-
 		$cat_total_field = 'Hours';
+
 		// Set this to zero to disable the overall total at the bottom of the category list
-
 		$print_overall_total = 1;
-		// Set this value to the text to display after the overall total value
 
+		// Set this value to the text to display after the overall total value
 		$cat_total_desc = 'hours';
 
 		$now = current_time('mysql', 1);
